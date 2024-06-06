@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+body {
+  font-family: "Jost", sans-serif;
+}
+nav{
+  z-index: 10000 !important;
+}
+nav ~ div {
+  z-index: 1000 !important;
+}
+li {
+  position: relative; 
+  padding: 15px 20px;
+  display:  !important;
+}
+nav li::before { 
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(188, 183, 183);
+  transition: 0.75s;
+}
+nav li:hover::before {
+  width: 100%;
+}
+/* Landing */
+.gradientBg{
+  background: linear-gradient(99deg, #EE9AE5 0%,#5961F9 100%)
+}
+.btnPrimary{
+  @apply bg-secondary font-semibold rounded hover:bg-primary text-white transition-all duration-300 py-2 px-4;
+}
